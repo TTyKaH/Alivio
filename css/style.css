@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Georgia Regular";
-  src: url("Georgia.eot");
-  src: url("Georgia.eot?#iefix") format("embedded-opentype"),
-    url("Georgia.woff") format("woff"), url("Georgia.ttf") format("truetype");
+  src: url("../fonts/georgia.eot");
+  src: url("../fonts/georgia.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/georgia.woff") format("woff"), url("../fonts/georgia.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -36,20 +36,21 @@ header {
   color: #01996d;
 }
 
-nav ul {
+nav {
   display: flex;
   justify-content: space-between;
   width: 557px;
 }
 
-nav ul li a {
-  color: #292929;
+nav a {
+  color: rgb(155, 155, 155);
   font-weight: normal;
+  transition: 0.2s linear;
+
 }
 
-nav ul li a:hover {
-  color: rgb(179, 179, 179);
-  transition: 0.2s linear;
+nav a:hover {
+  color: #292929;
 }
 
 .sign-in {
@@ -60,12 +61,12 @@ nav ul li a:hover {
 }
 
 .sign-in a {
-  color: #292929;
+  color: rgb(155, 155, 155);
+  transition: 0.2s linear;
 }
 
 .sign-in a:hover {
-  color: rgb(179, 179, 179);
-  transition: 0.2s linear;
+  color: #292929;
 }
 
 .sign-in button {
@@ -73,6 +74,7 @@ nav ul li a:hover {
   height: 53px;
 }
 
+/* main */
 /* hero */
 .hero {
   background: no-repeat url(../img/bg.jpg);
@@ -108,12 +110,9 @@ h1 {
   height: 65px;
 }
 
-/* main */
 /* first section */
 .introduce {
-  margin: 170px 0 51px 0;
-  display: flex;
-  flex-direction: column;
+  padding: 170px 0 51px 0;
 }
 
 .how-it-works {
@@ -122,14 +121,15 @@ h1 {
   justify-content: space-between;
 }
 
-.how-it-works div span {
+/*  */
+.how-it-works div div {
   font-size: 24px;
   font-weight: 600;
 }
 
 h2 {
   max-width: 550px;
-  line-height: 157%;
+  line-height: 1.4;
   font-size: 50px;
   font-family: "Georgia Regular";
   color: #01996d;
@@ -171,7 +171,7 @@ h2 {
   color: #01996d;
   opacity: 0.2;
   font-size: 150px;
-  line-height: 150%;
+  line-height: 1.5;
   font-family: "Georgia Regular";
 }
 
@@ -186,7 +186,7 @@ h3 {
   font-family: "Georgia Regular";
   font-size: 30px;
   font-weight: bold;
-  color: #000000;
+  color: #000;
 }
 
 .step:first-child h3 {
@@ -219,17 +219,19 @@ h3 {
 .video-bg {
   display: flex;
   background-color: #245852;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .video {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  margin: 230px 207px 170px 207px;
+  justify-content: space-around;
+  margin: 230px auto 170px auto;
 }
 
 .video-text h2,
-.video-text span,
+.video-text div,
 .video-text button {
   color: #fff;
 }
@@ -244,7 +246,7 @@ h3 {
   max-width: 500px;
 }
 
-.video-text span {
+.video-text div {
   margin: 37px 0 50px 0;
 }
 
@@ -275,7 +277,7 @@ main section:last-child {
   flex-direction: column;
 }
 
-.our-product span {
+.our-product div {
   font-size: 24px;
   font-weight: 600;
 }
@@ -300,32 +302,31 @@ footer {
   background-color: #245852;
 }
 
-.footer-bg ul {
-  padding: 65px 0 130px 0;
-}
-
-.footer-bg ul li:first-child a {
-  font-size: 40px;
-  font-weight: 900;
-}
-
-.footer-bg ul li {
+.footer-bg {
+  height: 380px;
   margin-top: 60px;
+  padding: 65px 0 130px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
 }
 
-.footer-bg ul li a {
-  color: #fff;
+.footer-bg a {
+  color: rgb(204, 204, 204);
+  transition: color .2s linear;
   margin-top: 0;
   font-size: 25px;
 }
 
-.footer-bg ul li a:hover {
-    transition: .2s linear;
-    opacity: .6;
+.footer-bg a:hover {
+  color: #fff;
 }
 
-.footer-bg ul li:first-child a:hover {
-    opacity: 1;
+.alivio {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 900;
 }
 
 /* helpers */
@@ -338,9 +339,9 @@ footer {
   border: 0;
   border-radius: 5px;
   color: #fff;
+  transition: background-color 0.2s linear;
 }
 
 .button-help:hover {
-  transition: 0.2s linear;
-  background-color: #008660;
+  background: #008660;
 }
